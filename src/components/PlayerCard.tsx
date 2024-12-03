@@ -8,26 +8,24 @@ const PlayerCard = ({ player }: { player: Player }) => {
   return (
     <Card sx={{ marginBottom: 2 }}>
       <Stack
-        direction='row' // Column para pantallas pequeñas, row para más grandes
+        direction='row'
         alignItems="center"
       >
-        {/* Imagen centrada y responsiva */}
         <Box
           component="img"
           src={`${import.meta.env.BASE_URL}logo-pepes.png`}
           alt={`${name}'s avatar`}
           sx={{
-            width: { xs: 100, sm: 150, md: 200 }, // Ajusta el tamaño según el tamaño de pantalla
+            width: { xs: 100, sm: 150, md: 200 },
             height: { xs: 100, sm: 150, md: 200 },
-            borderRadius: '50%', // Circular
-            objectFit: 'cover', // Ajustar la imagen
+            borderRadius: '50%',
+            objectFit: 'cover',
           }}
         />
-        {/* Contenido de la tarjeta */}
         <CardContent
           sx={{
-            textAlign: { xs: 'left', sm: 'left' }, // Centrado en pantallas pequeñas
-            flex: 1, // Asegura que ocupe el espacio necesario
+            textAlign: { xs: 'left', sm: 'left' },
+            flex: 1,
           }}
         >
           <Typography variant="h6">
