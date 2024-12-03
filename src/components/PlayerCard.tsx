@@ -2,7 +2,6 @@
 import { Card, CardContent, Typography, Box, Stack } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import { Player } from '../interfaces/interfaces';
-import logo from '../assets/logo-pepes.png'
 
 const PlayerCard = ({ player }: {player: Player}) => {
   const { rank, name, stars, matchesPlayed, matchesWon, points } = player
@@ -12,7 +11,7 @@ const PlayerCard = ({ player }: {player: Player}) => {
         {/* Imagen centrada a la izquierda */}
         <Box
           component="img"
-          src={logo}
+          src={`${import.meta.env.BASE_URL}logo-pepes.png`}
           alt={`${name}'s avatar`}
           sx={{
             width: 200,
