@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import PlayerCard from './components/PlayerCard';
-import { Button, Container, Stack, Tab, Tabs, Typography } from '@mui/material';
+import { Container, Tab, Tabs, Typography } from '@mui/material';
 
 const App = () => {
 
@@ -70,9 +70,10 @@ const App = () => {
     { id: 27, name: 'Juancho', matchesPlayed: 4, matchesWon: 2, points: 50.0, stars: 2 }
   ];
   const [activeTab, setActiveTab] = useState(0);
-  const [players, setPlayers] = useState(acumulado); // Datos iniciales
+  const [players, setPlayers] = useState(acumulado);
   
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    event.preventDefault()
     setActiveTab(newValue);
     // Cambiar los datos según la pestaña seleccionada
     if (newValue === 0) setPlayers(acumulado);
