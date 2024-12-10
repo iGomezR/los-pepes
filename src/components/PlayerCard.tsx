@@ -3,7 +3,7 @@ import StarIcon from '@mui/icons-material/Star';
 import { Player } from '../interfaces/interfaces';
 
 const PlayerCard = ({ player }: { player: Player }) => {
-  const { rank, name, stars, matchesPlayed, matchesWon, points } = player;
+  const { name, stars, matchesPlayed, matchesWon, points } = player;
 
   return (
     <Card sx={{ marginBottom: 2 }}>
@@ -28,15 +28,15 @@ const PlayerCard = ({ player }: { player: Player }) => {
             flex: 1,
           }}
         >
-          <Typography variant="h6">
-            {rank}. {name}
-          </Typography>
+
           <Stack
             direction="row"
             alignItems="center"
             spacing={1}
           >
-            <Typography variant="body2">Estrellas:</Typography>
+            <Typography variant="h6">
+              {name}
+            </Typography>
             <Box>
               {Array(stars)
                 .fill(null)

@@ -4,7 +4,7 @@ export interface HeaderProps {
 }
 
 export interface Player {
-  rank: number; // Posición en el ranking
+  id: number; // Posición en el ranking
   name: string; // Nombre del jugador
   stars: number; // Cantidad de estrellas según su rendimiento
   matchesPlayed: number; // Partidos jugados
